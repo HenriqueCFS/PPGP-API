@@ -43,10 +43,14 @@ export default class UserController {
     try {
       const { id } = req.params;
       const { name, email, password } = req.body;
-      const hashedPassword = await bcrypt.hash(password, 10);
+      let data = { name, email, password };
+      if (password) {
+        const hashedPassword = await bcrypt.hash(password, 10);
+        data = { ...data, password: hashedPassword };
+      }
       const user = await prisma.user.update({
         where: { id },
-        data: { name, email, password },
+        data,
       });
       if (!user) {
         res.status(404).json({ message: "User not found" });

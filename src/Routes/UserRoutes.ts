@@ -1,6 +1,7 @@
 import UserController from "../Controllers/UserController";
 import express from "express";
 import requireAuth from "../Middlewares/requireAuth";
+import isAdmin from "../Middlewares/isAdmin";
 
 var router = express.Router();
 
@@ -17,9 +18,9 @@ router.get("/users", requireAuth, UserController.getUsers);
 
 router.get("/users/:id", requireAuth, UserController.getUser);
 
-router.put("/users/:id", requireAuth, UserController.updateUser);
+router.put("/users/:id", requireAuth, isAdmin, UserController.updateUser);
 
-router.delete("/users/:id", requireAuth, UserController.deleteUser);
+router.delete("/users/:id", requireAuth, isAdmin, UserController.deleteUser);
 
 router.post("/login", UserController.login);
 
