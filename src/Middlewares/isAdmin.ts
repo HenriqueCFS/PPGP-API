@@ -1,6 +1,6 @@
 import { prisma } from "../utils/prisma";
 
-const isGroupMember = async (req, res, next) => {
+const isSysAdmin = async (req, res, next) => {
   const userId = req.user.id;
   const roles = await prisma.userRole.findMany({
     where: {
@@ -17,4 +17,4 @@ const isGroupMember = async (req, res, next) => {
   next();
 };
 
-export default isGroupMember;
+export default isSysAdmin;
