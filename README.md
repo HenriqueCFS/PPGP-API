@@ -3,12 +3,12 @@ A high-performance and scalable API built with TypeScript, Express, and Prisma t
 
 ## Getting Started
 Clone the repository to your local machine
-```
-$ git clone https://github.com/<your-github-username>/ts-api.git
+``` ruby
+$ git clone https://https://github.com/HenriqueCFS/PPGP-API
 ```
 Change into the newly created directory.
-```
-$ cd ts-api
+``` ruby
+$ cd PPGP-API
 ```
 Install the dependencies.
 ``` ruby
@@ -24,7 +24,7 @@ $ npm run dev
 ```
 ## Testing
 To run the test suite, use the following command:
-```
+``` ruby
 $ npm test
 ```
 ## Built With
