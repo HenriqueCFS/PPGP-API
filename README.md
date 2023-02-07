@@ -4,7 +4,7 @@ A high-performance and scalable API built with TypeScript, Express, and Prisma t
 ## Getting Started
 Clone the repository to your local machine
 ``` ruby
-$ git clone https://https://github.com/HenriqueCFS/PPGP-API
+$ git clone https://github.com/HenriqueCFS/PPGP-API
 ```
 Change into the newly created directory.
 ``` ruby
